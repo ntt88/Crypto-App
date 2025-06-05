@@ -22,8 +22,6 @@ const Crypto = () => {
       <h1 className="title">
 
         <FaBitcoin />
-
-        CryptoCurrency
         <FaBitcoin />
       </h1>
 
