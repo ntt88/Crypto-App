@@ -23,7 +23,7 @@
 }
 
 .deets-container {
-  border: 1px solid red;
+  border: 1px #33fff3;
   font-size: 20px;
   display: flex;
   flex-direction: column;
@@ -40,6 +40,6 @@
 }
 
 .deets:nth-child(even) {
-  color: red;
+  color: #33ffc1;
   background-color: black;
 }

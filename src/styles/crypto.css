@@ -13,7 +13,7 @@
 
 .currency-card {
   cursor: pointer;
-  color: red;
+  color: #d1ff33;
   min-height: 100px;
   display: grid;
   place-items: center;
