@@ -15,6 +15,10 @@ export const getCurrencies = createAsyncThunk(
     try {
       const response = await axios.get(url);
       const { data } = response.data;
+      console.log('data');
+      console.log(typeof data);
+      data.sort((a, b) => (a.percent_change_7d < b.percent_change_7d ? 1 : -1));
+      console.log(data);
       return data;
     } catch (error) {
       return isRejectedWithValue(error.message);
