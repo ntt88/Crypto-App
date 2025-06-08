@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi';
+import CryptoCurrencyDetails from '../currencies/CryptoCurrencyDetails';
 
 import '../../styles/details.css';
 
@@ -91,6 +92,7 @@ const Details = () => {
           </p>
         </div>
       </div>
+      <CryptoCurrencyDetails key={currency.id} currency={currency} />
     </div>
   );
 };
