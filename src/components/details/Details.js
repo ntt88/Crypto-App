@@ -7,12 +7,21 @@ import '../../styles/details.css';
 
 const Details = () => {
   const location = useLocation();
-  const { currency } = location.state;
+  const { currency, currencies } = location.state;
 
   const navigate = useNavigate();
 
+  console.log('currency:', currency);
+  console.log('currencies:', currencies);
+
   const handleBackClick = () => {
     navigate('/');
+  };
+
+  const handleComparison = () => {
+    navigate(`/CryptoCurrencyDetails/${currency.name.toLowerCase()}`, {
+      state: { currency, currencies },
+    });
   };
 
   const renderChange = (value) => {
@@ -32,6 +41,21 @@ const Details = () => {
 
   return (
     <div className="details-container">
+      <div
+        className="currency-card"
+        key={currency.id}
+        onClick={handleComparison}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleComparison();
+          }
+        }}
+        role="button"
+        tabIndex={0}
+      >
+        <h2 className="symbol">{currency.symbol}</h2>
+        <p className="change">{renderChange()}</p>
+      </div>
       <div
         className="back-arrow"
         onClick={handleBackClick}

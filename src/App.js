@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { getCurrencies } from './redux/crypto/currencySlice';
 
 import Crypto from './components/currencies/Crypto';
+import CryptoCurrencyDetails from './components/currencies/CryptoCurrencyDetails';
 import Details from './components/details/Details';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Crypto />} />
         <Route path="/details/:name" element={<Details />} />
+        <Route path="/CryptoCurrencyDetails/:name" element={<CryptoCurrencyDetails />} />
       </Routes>
     </div>
   );

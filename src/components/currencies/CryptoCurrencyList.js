@@ -7,7 +7,7 @@ const CryptoCurrencyList = ({ currencies }) => (
     <ul className="currency-container">
 
       {currencies.map((currency) => (
-        <CryptoCurrencyItem key={currency.id} currency={currency} />
+        <CryptoCurrencyItem key={currency.id} currency={currency} currencies={currencies} />
       ))}
 
     </ul>

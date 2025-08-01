@@ -2,12 +2,15 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
-const CryptoCurrencyItem = ({ currency }) => {
+const CryptoCurrencyItem = ({ currency, currencies }) => {
   const navigate = useNavigate();
+
+  console.log('currency:', currency);
+  console.log('currencies:', currencies);
 
   const handleDetails = () => {
     navigate(`/details/${currency.name.toLowerCase()}`, {
-      state: { currency },
+      state: { currency, currencies },
     });
   };
 
