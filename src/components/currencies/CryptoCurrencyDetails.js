@@ -68,6 +68,7 @@ const CryptoCurrencyDetails = () => {
   const { currency, currencies } = location.state;
   console.log('currency:', currency);
   console.log('currencies:', currencies);
+  console.log('data:', data);
   const BTC = findCurrencey('BTC', currencies);
   console.log(BTC);
   return (
